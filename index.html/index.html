@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>大运河的文化</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.8;
+            background-color: #f9f6f0;
+        }
+
+        #header-content {
+            width: 100%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            background-image: url("img/biaotibeijing.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            background-color: #a4644a;
+            color: #ffffff;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .menu ul {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu ul li {
+            width: 33%;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li:hover {
+            background-color: #8b5a2b;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            text-align: center;
+            margin: 30px 0;
+            color: #634130;
+        }
+
+        /* 时间轴样式 */
+        .timeline {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #d2bc7f;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #ffffff;
+        }
+
+        .timeline-list {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+            margin: 0 5%;
+        }
+
+        .timeline-item {
+            position: relative;
+            text-align: center;
+            width: 120px;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ffffff;
+            margin: 0 auto 10px;
+            transition: all 0.3s;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .timeline-content {
+            font-size: 14px;
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        .timeline-item:hover .timeline-dot {
+            background: #2196f3;
+            transform: scale(1.2);
+            box-shadow: 0 0 0 3px rgba(33,150,243,0.3);
+        }
+
+        .timeline-item:hover .timeline-content {
+            color: #e3f2fd;
+        }
+
+        /* 布局优化 */
+        .container {
+            display: flex;
+            width: 90%;
+            margin: 0 auto 40px; /* 增加底部间距 */
+            gap: 30px; /* 增大左右间距 */
+            padding: 20px;
+            box-sizing: border-box; /* 避免宽度溢出 */
+        }
+
+        .content-image {
+            flex: 1; /* 左侧图片区域占1份 */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            object-fit: cover; /* 保持图片比例 */
+        }
+
+        .content-intro {
+            flex: 1.5; /* 右侧文字区域占1.5份，比图片区域宽一些 */
+            padding: 30px; /* 增加内边距 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .intro-title {
+            font-size: 22px;
+            color: #a4644a;
+            margin-top: 0;
+            border-bottom: 2px solid #d2bc7f;
+            padding-bottom: 10px;
+        }
+
+        .intro-section {
+            margin-bottom: 20px;
+        }
+
+        .intro-section h4 {
+            margin: 15px 0 10px;
+            color: #634130;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header-content">
+            <h1>时空长廊-大运河演变史</h1>
+        </div>
+    </header>
+    <div class="menu">
+        <ul>
+            <li>网站首页</li>
+            <li>运河历史</li>
+            <li>运河文化</li>
+        </ul>
+    </div>
+
+    <div class="timeline">
+        <ul class="timeline-list">
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">隋朝</div>
+                <div class="timeline-content">奠定框架，贯通南北</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">唐朝</div>
+                <div class="timeline-content">持续修缮，走向繁荣</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">宋朝</div>
+                <div class="timeline-content">漕运鼎盛，经济命脉</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">元朝</div>
+                <div class="timeline-content">裁弯取直，形成京杭</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">明朝</div>
+                <div class="timeline-content">大规模整修河道</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">清朝</div>
+                <div class="timeline-content">维持漕运，渐趋衰落</div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-time">现代</div>
+                <div class="timeline-content">列入世遗，获得新生</div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- 图片和介绍容器 -->
+    <div class="container">
+        <!-- 左侧图片区域 - 上下排列 -->
+        <div class="content-image">
+            <img src="img/ditu2.jpg" alt="大运河地图">
+            <img src="img/dayunhe1.jpg" alt="大运河">
+        </div>
+        
+        <!-- 右侧文字介绍区域 -->
+        <div class="content-intro">
+            <h3 class="intro-title">大运河历史脉络</h3>
+            <p>大运河是中国古代贯通南北的超级水利工程，核心脉络可概括为“始于隋、兴于唐宋、变于元、盛于明清、续于当代”。</p>
+            
+            <div class="intro-section">
+                <h4>1. 隋朝：奠定框架，贯通南北</h4>
+                <p>- 隋炀帝时期（605-610年），以洛阳为中心，开凿通济渠、邗沟、永济渠、江南河，首次将五大水系连通。</p>
+                <p>- 全长约2700公里，成为后世大运河的基础。</p>
+            </div>
+            
+            <div class="intro-section">
+                <h4>2. 唐宋：持续修缮，走向繁荣</h4>
+                <p>- 唐朝增设水闸、疏浚河道，运河成为“漕运生命线”，扬州、杭州等城市崛起。</p>
+                <p>- 宋朝漕运量达顶峰，带动手工业、贸易发展。</p>
+            </div>
+            
+            <div class="intro-section">
+                <h4>3. 元朝：裁弯取直，形成“京杭大运河”</h4>
+                <p>- 废弃洛阳至开封段，开凿济州河、会通河、通惠河，连接北京与杭州。</p>
+                <p>- 全程缩短至约1800公里，形成现代京杭大运河走向。</p>
+            </div>
+            
+            <div class="intro-section">
+                <h4>4. 明清：维护鼎盛，渐趋衰落</h4>
+                <p>- 明朝大规模整修，清朝延续漕运制度，年漕运量最高达400万石。</p>
+                <p>- 19世纪后因黄河改道、铁路兴起，漕运功能衰退。</p>
+            </div>
+            
+            <div class="intro-section">
+                <h4>5. 当代：保护与新生</h4>
+                <p>- 2014年列入《世界遗产名录》，成为世界最长、最古老的人工水道。</p>
+                <p>- 部分河段仍通航，兼具防洪、灌溉及文化旅游功能。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
